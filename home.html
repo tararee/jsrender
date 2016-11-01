@@ -9,11 +9,12 @@
         <script src="//www.jsviews.com/download/jsrender.js"></script>
         <!-- CSS -->
         <link href="styles.css" rel="stylesheet" type="text/css" />
+        <meta name="viewport" content="width=device-width">
     </head>
 
     <body>
-<ul id="musicList"></ul>
-    <script id="musicTemplate" type="text/x-jsrender">
+<ul id="skirtList"></ul>
+    <script id="skirtTemplate" type="text/x-jsrender">
       <li>
       <div>
         <h2>{{:model.brand}} {{:model.name}}
@@ -47,8 +48,8 @@
                 name: "Green Skirt",
                 brand: "Pink Martini"
             }}];
-            $('#musicList').html(
-              $('#musicTemplate').render(products)
+            $('#skirtList').html(
+              $('#skirtTemplate').render(products)
             );
       });
 </script>
