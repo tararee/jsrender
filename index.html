@@ -1,24 +1,37 @@
 <!DOCTYPE HTML>
 <html>
+
 <body>
-<head>
 
-  <!-- Load jQuery -->
-<script src="//code.jquery.com/jquery-1.12.4.js"></script>
+    <head>
 
-<!-- Load JsRender latest version, from www.jsviews.com: -->
-<script src="//www.jsviews.com/download/jsrender.js"></script>
-</head>
+        <!-- Load jQuery -->
+        <script src="//code.jquery.com/jquery-1.12.4.js"></script>
 
-<div id="output">
-  <script id="template" type="text/x-jsrender>" <ul>
-    {{for people}}
-    <li>{{:name}} likes to wear {{:shirtColor}} shirts.</li>
-    {{/for}}
-     </ul>
-  </script>
+        <!-- JsRender latest version -->
+        <script src="//www.jsviews.com/download/jsrender.js"></script>
+    </head>
 
-</div>
+    <h3>Without a template</h3>
+    <div id="output1">
+
+
+    </div>
+
+    <h3>With a template</h3>
+    <div id="output2">
+
+
+    </div>
+
+    <script id="myTmpl" type="text/js-render">
+        <div>
+            <div>{{:#index+1}}: {{:model.brand}} {{:model.name}}</div>
+            <div>{{:pricing.salePrice}}</div>
+            <img src="{{:gallery.mainPhoto}}" style="height:80px;"/>
+        </div>
+        </script>
 </body>
 <script src="index.js"></script>
+
 </html>
