@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+<head>
+
+  <!-- Load jQuery -->
+<script src="//code.jquery.com/jquery-1.12.4.js"></script>
+
+<!-- Load JsRender latest version, from www.jsviews.com: -->
+<script src="//www.jsviews.com/download/jsrender.js"></script>
+</head>
+
+<div id="output">
+  <script id="template" type="text/x-jsrender>" <ul>
+    {{for people}}
+    <li>{{:name}} likes to wear {{:shirtColor}} shirts.</li>
+    {{/for}}
+     </ul>
+  </script>
+
+</div>
+</body>
+<script src="index.js"></script>
+</html>
