@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+
+        <!-- Load jQuery -->
+        <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+
+        <!-- JsRender latest version -->
+        <script src="//www.jsviews.com/download/jsrender.js"></script>
+        <!-- CSS -->
+        <link href="styles.css" rel="stylesheet" type="text/css" />
+    </head>
+
+    <body>
+<ul id="musicList"></ul>
+    <script id="musicTemplate" type="text/x-jsrender">
+      <li>
+      <div>
+        <h2>{{:model.brand}} {{:model.name}}
+        <p>${{:pricing.salePrice}}</p>
+        <img src="{{:gallery.mainPhoto}}"/>
+      </div>
+      </li>
+      </script>
+      <script type="text/javascript">
+      $(function (){
+        var products = [
+            {
+            pricing: { salePrice: 1649.01 },
+            gallery: { mainPhoto: "https://placekitten.com/200/300"},
+            model: {
+                name: "314ce",
+                brand: "Taylor"
+            }},
+            {
+            pricing: { salePrice: 4775.00 },
+            gallery: { mainPhoto: "http://lorempicsum.com/futurama/255/200/1" },
+            model: {
+                name: "814ce",
+                brand: "Taylor"
+            }},
+            {
+            modelId: 4,
+            pricing: { salePrice: 5899.00 },
+            gallery: { mainPhoto: "http://lorempicsum.com/futurama/350/200/1" },
+            model: {
+                name: "914ce",
+                brand: "Taylor"
+            }}];
+            $('#musicList').html(
+              $('#musicTemplate').render(products)
+            );
+      });
+</script>
+</body>
+
+</html>
